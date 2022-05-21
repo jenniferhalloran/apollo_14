@@ -25,4 +25,8 @@ describe "astronaut index page" do
       expect(page).to have_content(@sally.job)
     end
   end
+
+  it "displays the average age of all astronauts" do
+    expect(page).to have_content("Average Age: 34")
+  end
 end
