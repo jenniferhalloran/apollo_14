@@ -8,6 +8,7 @@ describe "astronaut index page" do
     visit "/astronauts"
   end
   it "lists each astronauts name, age, and job" do
+    save_and_open_page
     within "#astronaut-#{@buzz.id}" do
       expect(page).to have_content(@buzz.name)
       expect(page).to have_content(@buzz.age)
