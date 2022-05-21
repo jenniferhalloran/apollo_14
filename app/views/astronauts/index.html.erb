@@ -4,6 +4,10 @@
     <h3> <%= astronaut.name %> </h3>
     <p> <%= astronaut.age %> </p>
     <p> <%= astronaut.job %> </p>
+    <p> Astronaut Missions: </p>
+    <% astronaut.alphabetize_missions.each do |mission| %>
+      <%= mission.title %> <br>
+    <% end %>
     <hr>
 <% end %>
 
