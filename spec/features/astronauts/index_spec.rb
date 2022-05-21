@@ -49,4 +49,18 @@ describe "astronaut index page" do
       expect(page).to have_content("International Space Station")
     end
   end
+
+  it "displays the total time in space for each astronaut" do
+    save_and_open_page
+    within "#astronaut-#{@neil.id}" do
+      expect(page).to have_content("170 days")
+    end
+    within "#astronaut-#{@sally.id}" do
+      expect(page).to have_content("440 days")
+    end
+    within "#astronaut-#{@buzz.id}" do
+      expect(page).to have_content("80 days")
+    end
+
+  end
 end
